@@ -1,0 +1,14 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+
+metadata:
+  name: wordpress-binding
+
+subjects:
+- kind: ServiceAccount
+  name: wordpress-sa
+
+roleRef:
+  kind: Role
+  name: wordpress-reader
+  apiGroup: rbac.authorization.k8s.io

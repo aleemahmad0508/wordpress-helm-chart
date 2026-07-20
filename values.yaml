@@ -1,0 +1,99 @@
+# ----------------------------
+# WordPress
+# ----------------------------
+
+wordpress:
+  replicaCount: 2
+
+  image:
+    repository: wordpress
+    tag: latest
+    pullPolicy: IfNotPresent
+
+  service:
+    type: ClusterIP
+    port: 80
+
+  resources:
+    requests:
+      cpu: 200m
+      memory: 256Mi
+
+    limits:
+      cpu: 500m
+      memory: 512Mi
+
+# ----------------------------
+# MySQL
+# ----------------------------
+
+mysql:
+  image:
+    repository: mysql
+    tag: "8.0"
+    pullPolicy: IfNotPresent
+
+  database: wordpress
+
+  username: wordpress
+
+  password: aleem123
+
+  service:
+    port: 3306
+
+# ----------------------------
+# Storage
+# ----------------------------
+
+storage:
+  size: 20Gi
+
+# ----------------------------
+# Ingress
+# ----------------------------
+
+ingress:
+  enabled: true
+
+  className: nginx
+
+  host: wordpress.local
+
+# ----------------------------
+# HPA
+# ----------------------------
+
+autoscaling:
+  enabled: true
+
+  minReplicas: 2
+
+  maxReplicas: 5
+
+  targetCPUUtilizationPercentage: 70
+
+# ----------------------------
+# Service Account
+# ----------------------------
+
+serviceAccount:
+  create: true
+
+  name: wordpress-sa
+
+# ----------------------------
+# RBAC
+# ----------------------------
+
+rbac:
+  create: true
+
+# ----------------------------
+# TLS
+# ----------------------------
+
+tls:
+  enabled: false
+
+  secretName: wordpress-tls
