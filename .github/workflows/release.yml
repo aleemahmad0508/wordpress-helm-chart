@@ -1,0 +1,54 @@
+name: Publish Helm Chart
+
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Helm
+        uses: azure/setup-helm@v4
+
+      - name: Package Chart
+        run: |
+          mkdir -p .cr-release-packages
+          helm package . --destination .cr-release-packages
+
+      - name: Checkout gh-pages
+        run: |
+          git fetch origin gh-pages
+          git checkout gh-pages
+
+      - name: Copy Chart
+        run: |
+          mkdir -p charts
+          cp .cr-release-packages/*.tgz charts/
+
+      - name: Generate index.yaml
+        run: |
+          helm repo index . \
+            --url https://aleemahmad0508.github.io/wordpress-helm-chart/charts
+
+      - name: Commit Changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add .
+
+          git diff --cached --quiet || git commit -m "Update Helm Repository"
+
+          git push origin gh-pages
