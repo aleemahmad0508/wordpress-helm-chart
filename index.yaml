@@ -3,9 +3,9 @@ entries:
   wordpress-chart:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2026-07-20T12:40:14.773401949+05:00"
+    created: "2026-07-20T08:30:47.041346267Z"
     description: A Helm chart for deploying WordPress with MySQL on Kubernetes
-    digest: 996a152986667a823f8ba7f70507cdf39d969df4c35cbbab167d4f2ba67a7b1e
+    digest: b3aca161c9212010c216dd0761f74d2325b1bc21e3df4f99d53fcaeb05ebc2a6
     home: https://github.com/moziauddin/wpMysql-pvc-kubernetes
     keywords:
     - wordpress
@@ -17,6 +17,24 @@ entries:
     name: wordpress-chart
     type: application
     urls:
-    - https://aleemahmad0508.github.io/wordpress-helm-chart/charts/wordpress-chart-0.1.0.tgz
+    - https://aleemahmad0508.github.io/wordpress-helm-chart/charts/.cr-release-packages/wordpress-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2026-07-20T12:40:14.771538746+05:00"
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2026-07-20T08:30:47.041837199Z"
+    description: A Helm chart for deploying WordPress with MySQL on Kubernetes
+    digest: b3aca161c9212010c216dd0761f74d2325b1bc21e3df4f99d53fcaeb05ebc2a6
+    home: https://github.com/moziauddin/wpMysql-pvc-kubernetes
+    keywords:
+    - wordpress
+    - mysql
+    - kubernetes
+    - helm
+    maintainers:
+    - name: Aleem Ahmad
+    name: wordpress-chart
+    type: application
+    urls:
+    - https://aleemahmad0508.github.io/wordpress-helm-chart/charts/charts/wordpress-chart-0.1.0.tgz
+    version: 0.1.0
+generated: "2026-07-20T08:30:47.040695564Z"
