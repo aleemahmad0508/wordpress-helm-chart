@@ -3,7 +3,7 @@
 # ----------------------------
 
 wordpress:
-  replicaCount: 6
+  replicaCount: 3
 
   image:
     repository: wordpress
