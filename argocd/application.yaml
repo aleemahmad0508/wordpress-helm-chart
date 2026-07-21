@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+
+metadata:
+  name: wordpress
+  namespace: argocd
+
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/aleemahmad0508/wordpress-helm-chart.git
+    targetRevision: master
+    path: .
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: wordpress
+
+  syncPolicy: {}
