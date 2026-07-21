@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout master branch
-      - name: Checkout Repository
+      # Checkout master
+      - name: Checkout master
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -23,44 +23,45 @@ jobs:
       - name: Install Helm
         uses: azure/setup-helm@v4
 
-      # Package Helm Chart
+      # Package chart
       - name: Package Chart
         run: |
-          mkdir -p .cr-release-packages
-          helm package . --destination .cr-release-packages
+          mkdir -p package
+          helm package . --destination package
 
-      # Save package temporarily
-      - name: Save Chart Package
-        run: |
-          mkdir -p /tmp/chart
-          cp .cr-release-packages/*.tgz /tmp/chart/
-
-      # Switch to gh-pages
+      # Checkout gh-pages into another folder
       - name: Checkout gh-pages
-        run: |
-          git fetch origin gh-pages
-          git checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
 
-      # Copy package to charts directory
+      # Copy chart
       - name: Copy Chart
         run: |
-          mkdir -p charts
-          cp /tmp/chart/*.tgz charts/
+          mkdir -p gh-pages/charts
+          cp package/*.tgz gh-pages/charts/
 
-      # Generate Helm repository index
-      - name: Generate index.yaml
+      # Generate index.yaml
+      - name: Generate Index
         run: |
+          cd gh-pages
           helm repo index . \
             --url https://aleemahmad0508.github.io/wordpress-helm-chart/charts
 
-      # Commit and Push
+      # Commit & Push
       - name: Commit Changes
         run: |
+          cd gh-pages
+
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
           git add .
 
-          git diff --cached --quiet || git commit -m "Update Helm Repository"
-
-          git push origin gh-pages
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update Helm Repository"
+            git push origin gh-pages
+          fi
