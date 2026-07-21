@@ -65,7 +65,7 @@ ingress:
 # ----------------------------
 
 autoscaling:
-  enabled: true
+  enabled: false
 
   minReplicas: 2
 
