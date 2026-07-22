@@ -17,4 +17,13 @@ spec:
     server: https://kubernetes.default.svc
     namespace: wordpress
 
-  syncPolicy: {}
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+
+    syncOptions:
+      - CreateNamespace=true
+
+      # kubectl port-forward svc/argocd-server -n argocd 8080:443
+      # https://localhost:8080
