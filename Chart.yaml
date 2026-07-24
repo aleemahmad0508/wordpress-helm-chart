@@ -17,3 +17,8 @@ home: https://github.com/moziauddin/wpMysql-pvc-kubernetes
 
 maintainers:
   - name: Aleem Ahmad
+
+
+
+
+  # helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
