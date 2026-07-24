@@ -1,0 +1,28 @@
+apiVersion: monitoring.coreos.com/v1
+
+kind: PrometheusRule
+
+metadata:
+  name: wordpress-alerts
+
+spec:
+  groups:
+
+  - name: wordpress.rules
+
+    rules:
+
+    - alert: WordPressDown
+
+      expr: probe_success == 0
+
+      for: 1m
+
+      labels:
+        severity: critical
+
+      annotations:
+
+        summary: WordPress is Down
+
+        description: Website is unreachable.
