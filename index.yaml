@@ -3,9 +3,9 @@ entries:
   wordpress-chart:
   - apiVersion: v2
     appVersion: "1.11"
-    created: "2026-07-24T12:11:46.794165848Z"
+    created: "2026-07-24T12:27:59.834787741Z"
     description: A Helm chart for deploying WordPress with MySQL on Kubernetes
-    digest: 602cf91d23d0a68698b48d4f2a6fe04b8c53fea5ea52b5b09109efbded0a2a09
+    digest: 59e6ff6872b64c0b3b0ab312e06e4f39c1ea8399080ac41de370f9dd8a985008
     home: https://github.com/moziauddin/wpMysql-pvc-kubernetes
     keywords:
     - wordpress
@@ -21,7 +21,7 @@ entries:
     version: 0.1.11
   - apiVersion: v2
     appVersion: "1.10"
-    created: "2026-07-24T12:11:46.793732502Z"
+    created: "2026-07-24T12:27:59.834358353Z"
     description: A Helm chart for deploying WordPress with MySQL on Kubernetes
     digest: 6a6a3eafb9a0775e2ab331385b42a8817b9e5463612f7dec5ae8180a678ae0b3
     home: https://github.com/moziauddin/wpMysql-pvc-kubernetes
@@ -39,7 +39,7 @@ entries:
     version: 0.1.10
   - apiVersion: v2
     appVersion: "1.9"
-    created: "2026-07-24T12:11:46.799231136Z"
+    created: "2026-07-24T12:27:59.839799106Z"
     description: A Helm chart for deploying WordPress with MySQL on Kubernetes
     digest: 05d62c105fb465013c1064f8b5c922c2c9153ebd67ca6d9316afe9633973175f
     home: https://github.com/moziauddin/wpMysql-pvc-kubernetes
@@ -57,7 +57,7 @@ entries:
     version: 0.1.9
   - apiVersion: v2
     appVersion: "1.8"
-    created: "2026-07-24T12:11:46.797855965Z"
+    created: "2026-07-24T12:27:59.839412201Z"
     description: A Helm chart for deploying WordPress with MySQL on Kubernetes
     digest: 9f425da4f0d840adc87e8489b8f887f8b122ce02e0c5a2231249926074b5f654
     home: https://github.com/moziauddin/wpMysql-pvc-kubernetes
@@ -75,7 +75,7 @@ entries:
     version: 0.1.8
   - apiVersion: v2
     appVersion: "1.7"
-    created: "2026-07-24T12:11:46.797501137Z"
+    created: "2026-07-24T12:27:59.839002242Z"
     description: A Helm chart for deploying WordPress with MySQL on Kubernetes
     digest: 1d74a91fb7bd6c1025f23ff25b4a31580107bd14873bc085c1ac0a8f3619b5dc
     home: https://github.com/moziauddin/wpMysql-pvc-kubernetes
@@ -93,7 +93,7 @@ entries:
     version: 0.1.7
   - apiVersion: v2
     appVersion: "1.6"
-    created: "2026-07-24T12:11:46.797107946Z"
+    created: "2026-07-24T12:27:59.838302092Z"
     description: A Helm chart for deploying WordPress with MySQL on Kubernetes
     digest: 5cc4e729cc126cb0ac578415b4930cbf63433529563d599e3f0605fc02b95c23
     home: https://github.com/moziauddin/wpMysql-pvc-kubernetes
@@ -111,7 +111,7 @@ entries:
     version: 0.1.6
   - apiVersion: v2
     appVersion: "1.5"
-    created: "2026-07-24T12:11:46.79671678Z"
+    created: "2026-07-24T12:27:59.837409405Z"
     description: A Helm chart for deploying WordPress with MySQL on Kubernetes
     digest: c49ab9acc97f69a810e73458dbf30988a46b8677bb13c5fe7e5194f86060d153
     home: https://github.com/moziauddin/wpMysql-pvc-kubernetes
@@ -129,7 +129,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: "1.4"
-    created: "2026-07-24T12:11:46.796347254Z"
+    created: "2026-07-24T12:27:59.836921551Z"
     description: A Helm chart for deploying WordPress with MySQL on Kubernetes
     digest: 74d0e4d421760e921c94a2fe09437282fe8d91370c1b46f75cae1990b446b150
     home: https://github.com/moziauddin/wpMysql-pvc-kubernetes
@@ -147,7 +147,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: "1.3"
-    created: "2026-07-24T12:11:46.795587735Z"
+    created: "2026-07-24T12:27:59.836233349Z"
     description: A Helm chart for deploying WordPress with MySQL on Kubernetes
     digest: 41f5be068dc7b0cc7ed5c2ff3aa052a6b365460accd3202720936ac0e4a1fda5
     home: https://github.com/moziauddin/wpMysql-pvc-kubernetes
@@ -165,7 +165,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: "1.2"
-    created: "2026-07-24T12:11:46.794837112Z"
+    created: "2026-07-24T12:27:59.83552059Z"
     description: A Helm chart for deploying WordPress with MySQL on Kubernetes
     digest: eb9c1cab3fb063b5c2041b1df563083e2fb5e7ed8ff805c328bc493e947702d7
     home: https://github.com/moziauddin/wpMysql-pvc-kubernetes
@@ -183,7 +183,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: "1.1"
-    created: "2026-07-24T12:11:46.793272757Z"
+    created: "2026-07-24T12:27:59.83393209Z"
     description: A Helm chart for deploying WordPress with MySQL on Kubernetes
     digest: 62c45a7ec29c9a2b472a6219f64629779389054220c31d9bd9798e0924a44ce8
     home: https://github.com/moziauddin/wpMysql-pvc-kubernetes
@@ -201,7 +201,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: "1.1"
-    created: "2026-07-24T12:11:46.792116961Z"
+    created: "2026-07-24T12:27:59.832822522Z"
     description: A Helm chart for deploying WordPress with MySQL on Kubernetes
     digest: 39063555026b306d41c74674815ba1c5c45cb24692a9bbe5f794cad68b5cba6f
     home: https://github.com/moziauddin/wpMysql-pvc-kubernetes
@@ -219,7 +219,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2026-07-24T12:11:46.791619675Z"
+    created: "2026-07-24T12:27:59.832369639Z"
     description: A Helm chart for deploying WordPress with MySQL on Kubernetes
     digest: b3aca161c9212010c216dd0761f74d2325b1bc21e3df4f99d53fcaeb05ebc2a6
     home: https://github.com/moziauddin/wpMysql-pvc-kubernetes
@@ -237,7 +237,7 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2026-07-24T12:11:46.792561899Z"
+    created: "2026-07-24T12:27:59.833250428Z"
     description: A Helm chart for deploying WordPress with MySQL on Kubernetes
     digest: b3aca161c9212010c216dd0761f74d2325b1bc21e3df4f99d53fcaeb05ebc2a6
     home: https://github.com/moziauddin/wpMysql-pvc-kubernetes
@@ -253,4 +253,4 @@ entries:
     urls:
     - https://aleemahmad0508.github.io/wordpress-helm-chart/charts/charts/wordpress-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2026-07-24T12:11:46.790962237Z"
+generated: "2026-07-24T12:27:59.831729368Z"
