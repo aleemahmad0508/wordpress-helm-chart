@@ -23,6 +23,12 @@ wordpress:
       cpu: 500m
       memory: 512Mi
 
+  exporter:
+    enabled: true
+    image: prom/wordpress-exporter
+    port: 8080
+
+
 # ----------------------------
 # MySQL
 # ----------------------------
@@ -42,12 +48,14 @@ mysql:
   service:
     port: 3306
 
+
 # ----------------------------
 # Storage
 # ----------------------------
 
 storage:
   size: 20Gi
+
 
 # ----------------------------
 # Ingress
@@ -59,6 +67,7 @@ ingress:
   className: nginx
 
   host: wordpress.local
+
 
 # ----------------------------
 # HPA
@@ -73,6 +82,7 @@ autoscaling:
 
   targetCPUUtilizationPercentage: 70
 
+
 # ----------------------------
 # Service Account
 # ----------------------------
@@ -82,12 +92,14 @@ serviceAccount:
 
   name: wordpress-sa
 
+
 # ----------------------------
 # RBAC
 # ----------------------------
 
 rbac:
   create: true
+
 
 # ----------------------------
 # TLS
