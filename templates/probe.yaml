@@ -21,3 +21,8 @@ spec:
     staticConfig:
       static:
         - http://wordpress.wordpress.svc.cluster.local
+
+
+        # kubectl port-forward svc/prometheus-grafana -n monitoring 3000:80
+#  kubectl port-forward -n monitoring svc/prometheus-kube-prometheus-prometheus 9090:9090
+# kubectl port-forward svc/argocd-server -n argocd 8080:443
